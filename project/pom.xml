@@ -110,6 +110,13 @@
         <enabled>true</enabled>
       </snapshots>
     </pluginRepository>
+    <pluginRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
   </pluginRepositories>
 
   <distributionManagement>
@@ -293,6 +300,11 @@
         <groupId>com.squareup.okhttp</groupId>
         <artifactId>mockwebserver</artifactId>
         <version>${okhttp.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.gaul</groupId>
+        <artifactId>modernizer-maven-annotations</artifactId>
+        <version>1.8.0</version>
       </dependency>
       <dependency>
         <groupId>org.testng</groupId>
@@ -941,7 +953,7 @@
       <plugin>
         <groupId>org.gaul</groupId>
         <artifactId>modernizer-maven-plugin</artifactId>
-        <version>1.6.0</version>
+        <version>1.8.0</version>
         <!-- configuration and dependencies set via profiles -->
         <executions>
           <execution>
@@ -1120,19 +1132,6 @@
             <links>
               <link>http://download.oracle.com/javase/6/docs/api/</link>
             </links>
-            <footer><![CDATA[
-            <!-- Google Analytics -->
-            <script type='text/javascript'>
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-            </script>
-            <script type='text/javascript'>
-            try {
-            var pageTracker = _gat._getTracker("UA-8638379-1");
-            pageTracker._trackPageview();
-            } catch(err) {}</script>
-            ]]>
-            </footer>
           </configuration>
         </plugin>
       </plugins>
